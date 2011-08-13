@@ -7,8 +7,8 @@ Minimal test framework for .Net
 **Mintest** is intended to a minimal testing library in the same spirit
 of the xUnit family.
 
-It is easy embedable within any of your projects (being *~80 lines of
-code*) and at the same time, fairly complete.
+It is easy embedable within any of your projects (being **~80 lines of
+code**) and at the same time, fairly complete.
 
 It was born from a C# project where I wasn't allowed to have any
 dependencies.
@@ -25,24 +25,24 @@ using Mintest;
 public class MyCalculatorTest {
 
   [Test]
-  public void testAdd() {
+  public void TestAdd() {
     int expected = 3;
     int actual = Calculator.Add( 1 , 2 );
     Assert.AssertEquals<int>(expected, actual);
   }
 
   [Test]
-  public void testNegativeAdd() {
+  public void TestNegativeAdd() {
     Assert.AssertTrue("Should result in a negative number", Calculator.Add(5,-99) < 0);
   }
 
   [Test]
-  public void testToExponentialString() {
+  public void TestToExponentialString() {
     Assert.AssertEquals<string>("5x10^3", Calculator.ToExpString(5000));
   }
 
   [Test]
-  public void andAnotherScenarioWithException() {
+  public void AndAnotherScenarioWithException() {
     try {
       Calculator.AddIntStrings( "4", "asf" );
       Assert.Fail("An exception should have been thrown.");
@@ -88,4 +88,5 @@ Compile it and run it!
 
 1) *Yes*: 'Mintest' stands for 'the newest', 'in the most pristine
 condition'... or whatever.
-2) I *hate* Microsoft's general convention (Pascal's?) of first letter uppercasing, specially on method names.
+
+2) I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing, specially on method names.
