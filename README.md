@@ -7,8 +7,8 @@ Minimal test framework for .Net
 **Mintest** is intended to a minimal testing library in the same spirit
 of the xUnit family.
 
-It is easy embedable within any of your projects (being ~80 lines of
-code) and at the same time, fairly complete.
+It is easy embedable within any of your projects (being *~80 lines of
+code*) and at the same time, fairly complete.
 
 It was born from a C# project where I wasn't allowed to have any
 dependencies.
@@ -86,5 +86,6 @@ Compile it and run it!
 
 ## Notes
 
-*Yes*: 'Mintest' stands for 'the newest', 'in the most pristine
+1) *Yes*: 'Mintest' stands for 'the newest', 'in the most pristine
 condition'... or whatever.
+2) I *hate* Microsoft's general convention (Pascal's?) of first letter uppercasing, specially on method names.
