@@ -5,9 +5,13 @@ Minimal test framework for .Net
 ## Intro
 
 **Mintest** is intended to a minimal testing library in the same spirit
-as the xUnit family.
+of the xUnit family.
 
-It was born from a C#
+It is easy embedable within any of your projects (being ~80 lines of
+code) and at the same time, fairly complete.
+
+It was born from a C# project where I wasn't allowed to have any
+dependencies.
 
 Remember, never go without testing. ;-).
 
@@ -15,20 +19,36 @@ Remember, never go without testing. ;-).
 
 Create your test:
 
-``` csharp
+``` c#
 using Mintest;
 
-public class MyClassTest {
+public class MyCalculatorTest {
 
   [Test]
-  public void testScenario() {
-    Assert.AssertEquals<int>(1, 1);
-    Assert.Pass();
+  public void testAdd() {
+    int expected = 3;
+    int actual = Calculator.Add( 1 , 2 );
+    Assert.AssertEquals<int>(expected, actual);
   }
 
   [Test]
-  public void testAnotherScenario() {
-    Assert.AssertTrue("Two is never equal to 1 dumbass!!", 2==1);
+  public void testNegativeAdd() {
+    Assert.AssertTrue("Should result in a negative number", Calculator.Add(5,-99) < 0);
+  }
+
+  [Test]
+  public void testToExponentialString() {
+    Assert.AssertEquals<string>("5x10^3", Calculator.ToExpString(5000));
+  }
+
+  [Test]
+  public void andAnotherScenarioWithException() {
+    try {
+      Calculator.AddIntStrings( "4", "asf" );
+      Assert.Fail("An exception should have been thrown.");
+    } catch(Exception ex) {
+      Assert.Pass();
+    }
   }
 }
 ```
@@ -39,12 +59,13 @@ Create the TestRunner which intends to run all your tests.
 using Mintest;
 
 public class TestsMain {
+
   public static void Main() {
     // Create the TestRunner
     TestRunner testRunner = new TestRunner();
 
     // Add as many tests as you want.
-    testRunner.AddTest( typeof(MyClassTest) );
+    testRunner.AddTest( typeof(MyCalculatorTest) );
 
     // Run them all!
     bool allTestsPassed = testRunner.Run();
