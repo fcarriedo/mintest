@@ -53,7 +53,7 @@ public class MyCalculatorTest {
 }
 ```
 
-Create the TestRunner which intends to run all your tests.
+Create the `TestRunner` which intends to run all your tests.
 
 ``` c#
 using Mintest;
@@ -89,4 +89,4 @@ Compile it and run it!
 1) *Yes*: 'Mintest' stands for 'the newest', 'in the most pristine
 condition'... or whatever.
 
-2) I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing, specially on method names.
+2) I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing on method names.
