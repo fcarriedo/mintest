@@ -90,3 +90,20 @@ Compile it and run it!
 condition'*... or whatever.
 
 2) I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing on method names.
+
+## Using Mintest as a compiled library
+
+Although its initial intention was to embed it in your source code and not have any outside dependency, you can also use it as a library (**~5Kb**):
+
+Compile it as a library:
+
+```
+#> csc /t:library Mintest.cs
+```
+
+And then use it on your projects (**~5Kb**):
+
+```
+#> csc /main:TestsMain /reference:Mintest.dll /out:tests.exe
+#> tests.exe
+```
