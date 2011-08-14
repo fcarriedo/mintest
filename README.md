@@ -91,7 +91,7 @@ condition'*... or whatever.
  1. For compilation, this examples use the free `csc` (*C# compiler*)
     which is generally found under `C:\WINDOWS\Microsoft.NET\Framework\vX.X.[xxx]`. You may want to put it on your path.
  1. This library is supported on .NET Frameworks >= v2.0
- 1. I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing on method names.
+ 1. BTW: I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing on method names.
 
 ## Using Mintest as a compiled library
 
