@@ -86,10 +86,11 @@ Compile it and run it!
 
 ## Notes
 
-1) *Yes*: ***Mintest*** stands for *'the newest'*, *'in the most pristine
+ 1. *Yes*: ***Mintest*** stands for *'the newest'*, *'in the most pristine
 condition'*... or whatever.
-
-2) I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing on method names.
+ 1. For compilation, this examples use the `csc` (c sharp compiler)
+    which is generally found under `C:\WINDOWS\Microsoft.NET\Framework\vX.X.[xxx]`. You may want to put it on your path.
+ 1. I **hate** Microsoft's general convention (Pascal's?) of first letter uppercasing on method names.
 
 ## Using Mintest as a compiled library
 
